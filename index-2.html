@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+			<div class="header-left">
+				<!-- Logo-->
+				<a href="index.html" class="logo">
+					 <span>Logo</span>
+				</a>
+			</div>
+			<!--Navbar-->
+			<a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+            <a id="mobile_btn" class="mobile_btn float-left" href="#sidebar"><i class="fa fa-bars"></i></a>
+            <ul class="nav user-menu float-right">
+                <li class="nav-item dropdown has-arrow">
+                    <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
+                        <span class="user-img">
+							<img class="rounded-circle" src="assets/img/user.jpg" width="24" alt="Admin">
+							<span class="status online"></span>
+						</span>
+						<span>Admin</span>
+                    </a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="profile.html">My Profile</a>
+						<a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
+						<a class="dropdown-item" href="login.html">Logout</a>
+					</div>
+                </li>
+            </ul>
+            <div class="dropdown mobile-user-menu float-right">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="profile.html">My Profile</a>
+                    <a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
+                    <a class="dropdown-item" href="login.html">Logout</a>
+                </div>
+            </div>
+		</div>
+		<!--Sidebar-->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li class="menu-title">Main</li>
+                        <li class="active">
+                            <a href="index-2.html"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
+                        </li>
+                        <li>
+                            <a href="patients.html"><i class="fa fa-wheelchair"></i> <span>Patients</span></a>
+                        </li>
+                        <li>
+                            <a href="appointments.html"><i class="fa fa-calendar"></i> <span>Appointments</span></a>
+                        </li>
+                        <li>
+                            <a href="chat.html"><i class="fa fa-comments"></i> <span>Chat</span> <span class="badge badge-pill bg-primary float-right">5</span></a>
+                        </li>
+                        <li class="submenu">
+                            <a href="#"><i class="fa fa-video-camera camera"></i> <span> Calls</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="voice-call.html">Voice Call</a></li>
+                                <li><a href="video-call.html">Video Call</a></li>
+                                <li><a href="incoming-call.html">Incoming Call</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="page-wrapper">
+            <div class="content">
+				<!--Stats-->
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+                        <div class="dash-widget">
+                            <span class="dash-widget-bg2"><i class="fa fa-user-o"></i></span>
+                            <div class="dash-widget-info text-right">
+                                <h3>1072</h3>
+                                <span class="widget-title2">Patients <i class="fa fa-check" aria-hidden="true"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+                        <div class="dash-widget">
+                            <span class="dash-widget-bg3"><i class="fa fa-user-md" aria-hidden="true"></i></span>
+                            <div class="dash-widget-info text-right">
+                                <h3>72</h3>
+                                <span class="widget-title3">Attend <i class="fa fa-check" aria-hidden="true"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+                        <div class="dash-widget">
+                            <span class="dash-widget-bg4"><i class="fa fa-heartbeat" aria-hidden="true"></i></span>
+                            <div class="dash-widget-info text-right">
+                                <h3>618</h3>
+                                <span class="widget-title4">Pending <i class="fa fa-check" aria-hidden="true"></i></span>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				<!--Upcoming Appointments-->
+				<div class="row">
+					<div class="col-12 col-md-6 col-lg-8 col-xl-8">
+						<div class="card">
+							<div class="card-header">
+								<h4 class="card-title d-inline-block">Upcoming Appointments</h4> <a href="appointments.html" class="btn btn-primary float-right">View all</a>
+							</div>
+							<div class="card-body p-0">
+								<div class="table-responsive">
+									<table class="table mb-0">
+										<thead class="d-none">
+											<tr>
+												<th>Patient Name</th>
+												<th>Doctor Name</th>
+												<th>Timing</th>
+												<th class="text-right">Status</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td style="min-width: 200px;">
+													<a class="avatar" href="profile.html">B</a>
+													<h2><a href="profile.html">Bernardo Galaviz <span>New York, USA</span></a></h2>
+												</td>                 
+												<td>
+													<h5 class="time-title p-0">Appointment With</h5>
+													<p>Dr. Cristina Groves</p>
+												</td>
+												<td>
+													<h5 class="time-title p-0">Timing</h5>
+													<p>7.00 PM</p>
+												</td>
+												<td class="text-right">
+													<a href="appointments.html" class="btn btn-outline-primary take-btn">Take up</a>
+												</td>
+											</tr>
+											<tr>
+												<td style="min-width: 200px;">
+													<a class="avatar" href="profile.html">B</a>
+													<h2><a href="profile.html">Bernardo Galaviz <span>New York, USA</span></a></h2>
+												</td>                 
+												<td>
+													<h5 class="time-title p-0">Appointment With</h5>
+													<p>Dr. Cristina Groves</p>
+												</td>
+												<td>
+													<h5 class="time-title p-0">Timing</h5>
+													<p>7.00 PM</p>
+												</td>
+												<td class="text-right">
+													<a href="appointments.html" class="btn btn-outline-primary take-btn">Take up</a>
+												</td>
+											</tr>
+											<tr>
+												<td style="min-width: 200px;">
+													<a class="avatar" href="profile.html">B</a>
+													<h2><a href="profile.html">Bernardo Galaviz <span>New York, USA</span></a></h2>
+												</td>                 
+												<td>
+													<h5 class="time-title p-0">Appointment With</h5>
+													<p>Dr. Cristina Groves</p>
+												</td>
+												<td>
+													<h5 class="time-title p-0">Timing</h5>
+													<p>7.00 PM</p>
+												</td>
+												<td class="text-right">
+													<a href="appointments.html" class="btn btn-outline-primary take-btn">Take up</a>
+												</td>
+											</tr>
+											<tr>
+												<td style="min-width: 200px;">
+													<a class="avatar" href="profile.html">B</a>
+													<h2><a href="profile.html">Bernardo Galaviz <span>New York, USA</span></a></h2>
+												</td>                 
+												<td>
+													<h5 class="time-title p-0">Appointment With</h5>
+													<p>Dr. Cristina Groves</p>
+												</td>
+												<td>
+													<h5 class="time-title p-0">Timing</h5>
+													<p>7.00 PM</p>
+												</td>
+												<td class="text-right">
+													<a href="appointments.html" class="btn btn-outline-primary take-btn">Take up</a>
+												</td>
+											</tr>
+											<tr>
+												<td style="min-width: 200px;">
+													<a class="avatar" href="profile.html">B</a>
+													<h2><a href="profile.html">Bernardo Galaviz <span>New York, USA</span></a></h2>
+												</td>                 
+												<td>
+													<h5 class="time-title p-0">Appointment With</h5>
+													<p>Dr. Cristina Groves</p>
+												</td>
+												<td>
+													<h5 class="time-title p-0">Timing</h5>
+													<p>7.00 PM</p>
+												</td>
+												<td class="text-right">
+													<a href="appointments.html" class="btn btn-outline-primary take-btn">Take up</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>                   
+    <div class="sidebar-overlay" data-reff=""></div>
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <script src="assets/js/Chart.bundle.js"></script>
+    <script src="assets/js/chart.js"></script>
+    <script src="assets/js/app.js"></script>
+
+</body>
+
+
+
+</html>
